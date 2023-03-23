@@ -113,12 +113,7 @@ btn.addEventListener('click', () => {
   personName.textContent = currentPerson.name;
   personBio.textContent = currentPerson.title;
 });
-console.log((0 + 1) % bio.length);
-console.log((1 + 1) % bio.length);
-console.log((2 + 1) % bio.length);
-console.log((3 + 1) % bio.length);
-console.log((4 + 1) % bio.length);
-console.log((5 + 1) % bio.length);
+
 //comments
 // for (const [i, movement] of movements.entries()) {
 //   if (movement > 0) {
