@@ -47,6 +47,53 @@ const currencies = new Map([
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
+// Elements
+const labelWelcome = document.querySelector('.welcome');
+const labelDate = document.querySelector('.date');
+const labelBalance = document.querySelector('.balance__value');
+const labelSumIn = document.querySelector('.summary__value--in');
+const labelSumOut = document.querySelector('.summary__value--out');
+const labelSumInterest = document.querySelector('.summary__value--interest');
+const labelTimer = document.querySelector('.timer');
+
+const containerApp = document.querySelector('.app');
+const containerMovements = document.querySelector('.movements');
+
+const btnLogin = document.querySelector('.login__btn');
+const btnTransfer = document.querySelector('.form__btn--transfer');
+const btnLoan = document.querySelector('.form__btn--loan');
+const btnClose = document.querySelector('.form__btn--close');
+const btnSort = document.querySelector('.btn--sort');
+
+const inputLoginUsername = document.querySelector('.login__input--user');
+const inputLoginPin = document.querySelector('.login__input--pin');
+const inputTransferTo = document.querySelector('.form__input--to');
+const inputTransferAmount = document.querySelector('.form__input--amount');
+const inputLoanAmount = document.querySelector('.form__input--loan-amount');
+const inputCloseUsername = document.querySelector('.form__input--user');
+const inputClosePin = document.querySelector('.form__input--pin');
+
+const displayMovements = function (movements) {
+  containerMovements.innerHTML = '';
+  movements.forEach(function (mov, i) {
+    const type = mov > 0 ? 'deposit' : 'withdrawal';
+
+    const html = `
+    <div class="movements__row">
+    <div class="movements__type movements__type--${type}">${i + 1}${type}</div>
+    <div class="movements__value">${mov}</div>
+  </div>`;
+
+    containerMovements.insertAdjacentHTML('afterbegin', html);
+  });
+};
+displayMovements(account1.movements);
+
+//
+//
+//
+//
+//
 // account4.movements.forEach(function (mov, i) {
 //   if (mov > 0) {
 //     console.log(`Movement ${i + 1} : You have deposited ${mov}`);
@@ -62,57 +109,60 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 //     console.log(`Movement ${i + 1} : You have withdrew ${Math.abs(mov)}`);
 //   }
 // });
-const bio = [
-  {
-    name: 'Liton',
-    title: 'Merchandising Supervisor',
-    picture: 'Pic-1.jpeg',
-  },
-  {
-    name: 'Anik',
-    title: 'Assistant Merchandiser',
-    picture: 'Pic-2.jpeg',
-  },
-  {
-    name: 'Shemul Hasan',
-    title: 'Merchandising Supervisor',
-    picture: 'Pic-3.jpeg',
-  },
-  {
-    name: 'Jahid',
-    title: 'Assistant Merchandiser',
-    picture: 'Pic-4.jpeg',
-  },
-  {
-    name: 'Milky',
-    title: 'Assistant Manager',
-    picture: 'Pic-5.jpeg',
-  },
-  {
-    name: 'Yeasin Ali',
-    title: 'Assistant Manager',
-    picture: 'Pic-6.jpeg',
-  },
-];
 
-const personName = document.querySelector('.text-xl');
-const personBio = document.querySelector('.text-base');
-const btn = document.querySelector('.bg-blue-500');
-const pictureField = document.querySelector('.w-full');
+//small project================xxxxxxxxxxxxxx==============
+// const bio = [
+//   {
+//     name: 'Liton',
+//     title: 'Merchandising Supervisor',
+//     picture: 'Pic-1.jpeg',
+//   },
+//   {
+//     name: 'Anik',
+//     title: 'Assistant Merchandiser',
+//     picture: 'Pic-2.jpeg',
+//   },
+//   {
+//     name: 'Shemul Hasan',
+//     title: 'Merchandising Supervisor',
+//     picture: 'Pic-3.jpeg',
+//   },
+//   {
+//     name: 'Jahid',
+//     title: 'Assistant Merchandiser',
+//     picture: 'Pic-4.jpeg',
+//   },
+//   {
+//     name: 'Milky',
+//     title: 'Assistant Manager',
+//     picture: 'Pic-5.jpeg',
+//   },
+//   {
+//     name: 'Yeasin Ali',
+//     title: 'Assistant Manager',
+//     picture: 'Pic-6.jpeg',
+//   },
+// ];
 
-let currentIndex = 0;
+// const personName = document.querySelector('.text-xl');
+// const personBio = document.querySelector('.text-base');
+// const btn = document.querySelector('.bg-blue-500');
+// const pictureField = document.querySelector('.w-full');
 
-personName.textContent = bio[0].name;
-personBio.textContent = bio[0].title;
-pictureField.src = bio[0].picture;
+// let currentIndex = 0;
 
-btn.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % bio.length;
-  const currentPerson = bio[currentIndex];
-  pictureField.src = currentPerson.picture;
-  personName.textContent = currentPerson.name;
-  personBio.textContent = currentPerson.title;
-});
+// personName.textContent = bio[0].name;
+// personBio.textContent = bio[0].title;
+// pictureField.src = bio[0].picture;
+
+// btn.addEventListener('click', () => {
+//   currentIndex = (currentIndex + 1) % bio.length;
+//   const currentPerson = bio[currentIndex];
+//   pictureField.src = currentPerson.picture;
+//   personName.textContent = currentPerson.name;
+//   personBio.textContent = currentPerson.title;
+// });
+//small project...........................
 
 //comments
 // for (const [i, movement] of movements.entries()) {
