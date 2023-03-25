@@ -37,6 +37,133 @@
         <button class="login__btn">&rarr;</button>
       </form>
     </nav>
+    <!--calculator-->
+    <div class="flex flex-col justify-center items-center h-screen">
+      <div class="bg-white p-4 rounded shadow-lg">
+        <input
+          type="text"
+          class="w-full text-right mb-4 p-2 border border-gray-300 rounded"
+          disabled
+        />
+        <div class="grid grid-cols-4 gap-2">
+          <button
+            class="btn-clear col-span-2 bg-gray-200 text-gray-700 rounded p-2 hover:bg-gray-300"
+            data-num="C"
+          >
+            C
+          </button>
+          <!-- <button
+            class="bg-gray-200 text-gray-700 rounded p-2 hover:bg-gray-300"
+            data-num="DEL"
+          >
+            DEL
+          </button> -->
+          <button
+            class="bg-gray-200 text-gray-700 rounded p-2 hover:bg-gray-300"
+            data-num="%"
+          >
+            %
+          </button>
+          <button
+            class="btn bg-blue-500 text-white rounded p-2 hover:bg-blue-600"
+            data-num="/"
+          >
+            /
+          </button>
+          <button
+            class="btn bg-gray-200 text-gray-700 rounded p-2 hover:bg-gray-300"
+            data-num="7"
+          >
+            7
+          </button>
+          <button
+            class="btn bg-gray-200 text-gray-700 rounded p-2 hover:bg-gray-300"
+            data-num="8"
+          >
+            8
+          </button>
+          <button
+            class="btn bg-gray-200 text-gray-700 rounded p-2 hover:bg-gray-300"
+            data-num="9"
+          >
+            9
+          </button>
+          <button
+            class="btn bg-blue-500 text-white rounded p-2 hover:bg-blue-600"
+            data-num="*"
+          >
+            *
+          </button>
+          <button
+            class="btn bg-gray-200 text-gray-700 rounded p-2 hover:bg-gray-300"
+            data-num="4"
+          >
+            4
+          </button>
+          <button
+            class="btn bg-gray-200 text-gray-700 rounded p-2 hover:bg-gray-300"
+            data-num="5"
+          >
+            5
+          </button>
+          <button
+            class="btn bg-gray-200 text-gray-700 rounded p-2 hover:bg-gray-300"
+            data-num="6"
+          >
+            6
+          </button>
+          <button
+            class="btn bg-blue-500 text-white rounded p-2 hover:bg-blue-600"
+            data-num="-"
+          >
+            -
+          </button>
+          <button
+            class="btn bg-gray-200 text-gray-700 rounded p-2 hover:bg-gray-300"
+            data-num="1"
+          >
+            1
+          </button>
+          <button
+            class="btn bg-gray-200 text-gray-700 rounded p-2 hover:bg-gray-300"
+            data-num="2"
+          >
+            2
+          </button>
+          <button
+            class="btn bg-gray-200 text-gray-700 rounded p-2 hover:bg-gray-300"
+            data-num="3"
+          >
+            3
+          </button>
+          <button
+            class="btn bg-blue-500 text-white rounded p-2 hover:bg-blue-600"
+            data-num="+"
+          >
+            +
+          </button>
+          <button
+            class="btn col-span-2 bg-gray-200 text-gray-700 rounded p-2 hover:bg-gray-300"
+            data-num="0"
+          >
+            0
+          </button>
+          <button
+            class="btn bg-gray-200 text-gray-700 rounded p-2 hover:bg-gray-300"
+            data-num="."
+          >
+            .
+          </button>
+          <button
+            class="btn-equal bg-blue-500 text-white rounded p-2 hover:bg-blue-600"
+            data-num="="
+          >
+            =
+          </button>
+        </div>
+      </div>
+    </div>
+
     <!-- <button
       class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
     >

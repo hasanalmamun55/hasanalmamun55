@@ -88,7 +88,31 @@ const displayMovements = function (movements) {
   });
 };
 displayMovements(account1.movements);
+//calculator
+(function () {
+  let screen = document.querySelector('.w-full');
+  let btn = document.querySelectorAll('.btn');
+  let clear = document.querySelector('.btn-clear');
+  let equal = document.querySelector('.btn-equal');
 
+  btn.forEach(function (button) {
+    button.addEventListener('click', function (e) {
+      let value = e.target.dataset.num;
+      screen.value += value;
+    });
+  });
+  equal.addEventListener('click', function (e) {
+    if (screen.value === '') {
+      screen.value = '';
+    } else {
+      let answer = eval(screen.value);
+      screen.value = answer;
+    }
+  });
+  clear.addEventListener('click', function (e) {
+    screen.value = '';
+  });
+})();
 //
 //
 //

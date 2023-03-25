@@ -295,3 +295,107 @@ h2 {
 .timer {
   font-weight: 600;
 }
+
+html,
+body {
+  height: 100%;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button[data-value='C'] {
+  grid-column: span 2;
+}
+
+input[type='text']::-webkit-outer-spin-button,
+input[type='text']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='text'] {
+  -moz-appearance: textfield;
+}
+
+input[type='text']:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+input[type='text']::-webkit-input-placeholder {
+  text-align: right;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-gray-200 {
+  background-color: #edf2f7;
+}
+
+.bg-blue-500 {
+  background-color: #3b82f6;
+}
+
+.text-gray-700 {
+  color: #4a5568;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hover\:bg-gray-300:hover {
+  background-color: #e2e8f0;
+}
+
+.hover\:bg-blue-600:hover {
+  background-color: #2563eb;
+}
+
+[type='text'] {
+  border: 1px solid #e2e8f0;
+}
